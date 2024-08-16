@@ -1,9 +1,4 @@
 {
-<<<<<<< HEAD
-  "dependencies": {
-    "bcrypt": "^5.1.1",
-    "connect-session-sequelize": "^7.1.7",
-=======
   "name": "super-team-project-2",
   "version": "1.0.0",
   "description": "",
@@ -17,7 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
->>>>>>> bad5240bb927a6c86f4099d9607df59d3a52e861
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "express-handlebars": "^8.0.1",
