@@ -3,7 +3,7 @@
         "title": "City of Angels",
         "director": "Brad Silberling",
         "length": "1h 54m",
-        "npaa rating": "PG-13",
+        "mpaa_rating": "PG-13",
         "genre": "Romantic",
         "plot": "An angel on Earth, a doctor unable to believe, a patient with a secret, a love story made in Heaven."
     },
@@ -11,7 +11,7 @@
         "title": "You've Got Mail",
         "director": "Nora Ephron",
         "length": "1h 59m",
-        "npaa rating": "PG",
+        "mpaa_rating": "PG",
         "genre": "Romantic",
         "plot": "Book superstore magnate Joe Fox and independent book shop owner Kathleen Kelly fall in love in the anonymity of the Internet, both blissfully unaware that he's trying to put her out of business."
     },
@@ -19,7 +19,7 @@
         "title": "Pearl Harbor",
         "director": "Michael Bay",
         "length": "3h 03m",
-        "npaa rating": "PG-13",
+        "mpaa_rating": "PG-13",
         "genre": "Romantic",
         "plot": "A tale of war and romance mixed in with history. The story follows two lifelong friends and a beautiful nurse who are caught up in the horror of an infamous Sunday morning in 1941."
     },
@@ -27,7 +27,7 @@
         "title": "The Lake House",
         "director": "Alejandro Agresti",
         "length": "1h 39m",
-        "npaa rating": "PG",
+        "mpaa_rating": "PG",
         "genre": "Romantic",
         "plot": "A lonely doctor who once occupied an unusual lakeside house begins to exchange love letters with its former resident, a frustrated architect. They must try to unravel the mystery behind their extraordinary romance before it's too late."
     },
@@ -35,7 +35,7 @@
         "title": "Sweet November",
         "director": "Pat O'Connor",
         "length": "1h 59m",
-        "npaa rating": "PG-13",
+        "mpaa_rating": "PG-13",
         "genre": "Romantic",
         "plot": "A workaholic executive, and an unconventional woman agree to a personal relationship for a short period. In this short period she changes his life."
     },
@@ -43,7 +43,7 @@
         "title": "The Notebook",
         "director": "Nick Cassavetes",
         "length": "2h 03m",
-        "npaa rating": "PG-13",
+        "mpaa_rating": "PG-13",
         "genre": "Romantic",
         "plot": "An elderly man reads to a woman with dementia the story of two young lovers whose romance is threatened by the difference in their respective social classes."
     }

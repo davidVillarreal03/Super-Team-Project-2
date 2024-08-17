@@ -4,7 +4,7 @@
       "director": "Katsuhiro Otomo",
       "length": "2h 4m",
       "mpaa rating": "R",
-      "genre": "Sci-fi",
+      "genre": 6",
       "plot": "A secret military project endangers Neo-Tokyo when it turns a biker gang member into a rampaging psychic psychopath who can only be stopped by a teenager, his gang of biker friends and a group of psychics." 
     },
     {
@@ -12,7 +12,7 @@
       "director": "The Wachowskis",
       "length": "2h 16m",
       "mpaa rating": "R",
-      "genre": "Sci-fi",
+      "genre": 6",
       "plot": "When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence."
     },
     {
@@ -20,7 +20,7 @@
       "director": "John Carpenter",
       "length": "1h 49m",
       "mpaa rating": "R",
-      "genre": "Sci-fi",
+      "genre": 6",
       "plot": "A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims."
     },
     {
@@ -28,7 +28,7 @@
       "director": "Ridley Scott",
       "length": "1h 50m",
       "mpaa rating": "R",
-      "genre": "Sci-fi",
+      "genre": 6",
       "plot": "A blade runner must pursue and terminate four replicants who stole a ship in space and have returned to Earth to find their creator."
     },
     {
@@ -36,7 +36,7 @@
       "director": "Denis Villeneuve",
       "length": "2h 43m",
       "mpaa rating": "R",
-      "genre": "Sci-fi",
+      "genre": 6",
       "plot": "Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, who's been missing for thirty years."
   
     },
@@ -45,7 +45,7 @@
       "director": "Spike Jonze",
       "length": "2h 6m",
       "mpaa rating": "R",
-      "genre": "Sci-fi",
+      "genre": 6",
       "plot": "In a near future, a lonely writer develops an unlikely relationship with an operating system designed to meet his every need."
   
     },
@@ -54,7 +54,7 @@
       "director": "Stanley Kubrick",
       "length": "2h 19m",
       "mpaa rating": "G",
-      "genre": "Sci-fi",
+      "genre": 6",
       "plot": "After uncovering a mysterious artifact buried beneath the Lunar surface, a spacecraft is sent to Jupiter to find its origins: a spacecraft manned by two men and the supercomputer HAL 9000."
   
     },
@@ -63,9 +63,11 @@
       "director": "Shane Acker",
       "length": "1h 19m",
       "mpaa rating": "PG-13",
-      "genre": "Sci-fi",
+      "genre": 6",
       "plot": "A rag doll that awakens in a postapocalyptic future holds the key to humanity's salvation."
   
     }
+
+    
   ]
   
