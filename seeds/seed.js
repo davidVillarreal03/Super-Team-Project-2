@@ -11,7 +11,7 @@ const seedAll = async () => {
 
   await seedGenres();
   await seedMovies();
-  await seedUsers();n
+  await seedUsers();
   await seedFavorites();
 
   process.exit(0);
