@@ -84,7 +84,7 @@ const movieData = [
         "plot": "A rag doll that awakens in a postapocalyptic future holds the key to humanity's salvation.",
         "filename": "9.jpg",
     
-      }
+      },
       {
         "title": "Search Party",
         "director": "Scot Armstrong",
@@ -101,6 +101,7 @@ const movieData = [
         "year": "2011",
         "length": "2h 5m",
         "npaa rating": "R",
+        "genre-id": "2",
         "plot": "Competition between the maid of honor and a bridesmaid, over who is the bride's best friend, threatens to upend the life of an out-of-work pastry chef.",
         "filename": "bridesmaids.jpg",
       },
@@ -123,7 +124,7 @@ const movieData = [
         "genre-id": "2",
         "plot":"Nyles and Sarah find themselves stuck in a time loop and living the same day over and over again. They are drawn to each other but certain revelations threaten their budding romance.",
         "filename": "palm_springs.jpg",
-      }
+      },
       {
           "title": "The Hangover",
           "director": "Todd Phillips",
@@ -133,7 +134,7 @@ const movieData = [
           "genre-id": "2",
           "plot": "Three buddies wake up from a bachelor party in Las Vegas, with no memory of the previous night and the bachelor missing. They make their way around the city in order to find their friend before his wedding.",
           "filename": "the_hangover.jpg",
-        }
+        },
         {
           "title": "Booksmart",
           "director": "Olivia Wilde",
@@ -143,7 +144,7 @@ const movieData = [
           "genre-id": "2",
           "plot":"On the eve of their high-school graduation, two academic superstars and best friends realize they should have worked less and played more. Determined not to fall short of their peers, the girls try to cram four years of fun into one night.",
           "filename": "booksmart.jpg",
-        }
+        },
         {
           "title": "Superbad",
           "director": "Max Barbakow",
@@ -153,7 +154,7 @@ const movieData = [
           "genre-id": "2",
           "plot":"Two co-dependent high school seniors are forced to deal with separation anxiety after their plan to stage a booze-soaked party goes awry.",
           "filename": "superbad.jpg",
-        }
+        },
         {
             "title": "City of Angels",
             "director": "Brad Silberling",
