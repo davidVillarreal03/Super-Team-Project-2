@@ -22,7 +22,7 @@ Movie.init(
     year: {
         type: DataTypes.INTEGER,
         allowNull: false,
-    }
+    },
 
     length: {
       type: DataTypes.STRING,
