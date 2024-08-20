@@ -6,5 +6,6 @@ const userRoutes = require('./userRoutes');
 
 router.use('/users', userRoutes);
 router.use('/movies', movieRoutes);
+router.use('/genre', genreRoutes);
 
 module.exports = router;
