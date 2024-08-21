@@ -34,7 +34,7 @@ body, html {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('popCorn2.png') no-repeat center center fixed;
+    background: url('/public/images/pop+reel.png') no-repeat center center fixed;
     background-size: cover;
     position: relative;
     opacity: 0.10; /* Make background slightly transparent */
