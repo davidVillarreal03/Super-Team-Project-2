@@ -8,7 +8,7 @@ router.get('/movie/:id', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['title'],
+          attributes: ['name'],
         },
       ],
     });
