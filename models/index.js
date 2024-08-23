@@ -16,12 +16,14 @@ Genre.hasMany(Movie, {
 // A User has many Favorites
 User.hasMany(Favorite, {
   foreignKey: 'user_id',
+  //onDelete: 'CASCADE'
 });
 
 // A Favorite belongs to one User and one Movie
 Favorite.belongsTo(User, {
   foreignKey: 'user_id',
 });
+
 Favorite.belongsTo(Movie, {
   foreignKey: 'movie_id',
 });
@@ -30,5 +32,5 @@ module.exports = {
   User,
   Movie,
   Genre,
-  Favorite,
+  Favorite
 };

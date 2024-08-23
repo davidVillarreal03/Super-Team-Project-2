@@ -23,7 +23,6 @@ Movie.init(
         type: DataTypes.INTEGER,
         allowNull: false,
     },
-
     length: {
       type: DataTypes.STRING,
       allowNull: false,
