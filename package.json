@@ -11,11 +11,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
+    "cjs-module": "^1.5.0",
+    "connect-session-sequelize": "^7.1.7",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "express-handlebars": "^8.0.1",
     "express-session": "^1.18.0",
+    "handlebars": "^4.7.8",
+    "i": "^0.3.7",
+    "path": "^0.12.7",
     "pg": "^8.12.0",
     "prettier": "^3.3.3",
     "sequelize": "^6.37.3"

@@ -21,7 +21,7 @@ Genre.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'genre',
+    modelName: 'Genre',
   }
 );
 

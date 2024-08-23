@@ -1,4 +1,3 @@
-// seeds/userData.js
 const { User } = require('../models');
 
 const userData = [
@@ -15,9 +14,10 @@ const userData = [
   // Add more users as needed
 ];
 
-const seedUsers = () => User.bulkCreate(userData, {
-  individualHooks: true, // Ensures passwords are hashed
-  returning: true,
-});
+const seedUsers = () =>
+  User.bulkCreate(userData, {
+    individualHooks: true, // Ensures passwords are hashed
+    returning: true,
+  });
 
 module.exports = seedUsers;

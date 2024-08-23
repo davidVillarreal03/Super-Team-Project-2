@@ -1,16 +1,9 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { DataTypes } = require('sequelize');
+const sequelize = require('../config/connection'); // Import the Sequelize instance
 
-class Movie extends Model {}
-
-Movie.init(
+const Movie = sequelize.define(
+  'Movie',
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
     title: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -20,10 +13,9 @@ Movie.init(
       allowNull: false,
     },
     year: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
+      type: DataTypes.INTEGER,
+      allowNull: false,
     },
-
     length: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -35,26 +27,23 @@ Movie.init(
     genre_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'genre',
+        model: 'Genre',
         key: 'id',
       },
     },
     plot: {
       type: DataTypes.TEXT,
-      allowNull: false,
+      allowNull: true,
     },
     filename: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
   },
   {
     sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'movie',
-  }
+    modelName: 'Movie',
+  },
 );
 
 module.exports = Movie;

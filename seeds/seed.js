@@ -1,12 +1,14 @@
-// seed.js
-const sequelize = require('./config/connection');
-const seedGenres = require('./seeds/genreData');
-const seedMovies = require('./seeds/movieData');
-const seedUsers = require('./seeds/userData');
-const seedFavorites = require('./seeds/favoriteData');
+const fs = require('fs');
+const path = require('path');
+const sequelize = require('../config/connection');
+const { Genre, Movie, User, Favorite } = require('../models');
+
+const seedGenres = require('./genreData.json');
+const seedMovies = require('./movieData.json');
+const seedUsers = require('./userData.json');
+const seedFavorites = require('./favoriteData.json');
 
 const seedAll = async () => {
-    // while in development set to "true" empties tables and repopulates with seed data each time
   await sequelize.sync({ force: true });
 
   await seedGenres();
