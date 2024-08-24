@@ -6,17 +6,18 @@ router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
     const movieData = await Movie.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
+      // include: [
+      //   {
+      //     model: User,
+      //     attributes: ['name'],
+      //   },
+      // ],
     });
      
     // Serialize data so the template can read it
      const movies = movieData.map((movie) => movie.get({ plain: true }));
 
+     console.log(movies);
      // Pass serialized data and session flag into template
      res.render('homepage', { 
        movies, 
@@ -30,12 +31,6 @@ router.get('/', async (req, res) => {
 router.get('/movie/:id', async (req, res) => {
   try {
     const movieData = await Movie.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
     });
 
     const movie = movieData.get({ plain: true });
