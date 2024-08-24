@@ -1,0 +1,35 @@
+{{!-- <!-- Loop over each object in the movies array -->
+{{#each movies as |movie| }}
+<div class="row mb-4 movie">
+  <div class="col-md-5">
+    <h2>
+      <a href="/movie/{{movie.id}}">{{movie.title}}</a>
+    </h2>
+
+  </div>
+  <div class="col-md-7">
+    <p>
+      {{movie.plot}}
+    </p>
+    <p>
+      {{movie.filename}}
+    </p>
+  </div>
+</div>
+{{/each}} --}}
+
+  <!-- Movie Carousel -->
+  <div class="movie-carousel">
+    <div class="movie-carousel-track">
+      {{#each movies as |movie| }}
+      <div class="movie-card">
+        <img src="./images/{{movie.filename}}" alt="{{movie.title}}">
+        <div class="card-info">
+          <h2>{{movie.title}}</h2>
+          <p>{{movie.plot}}</p>
+        </div>
+      </div>
+    {{/each}}
+      <!-- Add more movie cards as needed -->
+    </div>
+  </div>

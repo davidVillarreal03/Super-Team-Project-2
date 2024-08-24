@@ -1,159 +1,153 @@
-const { Movie } = require('../models');
-
-const movieData = [
+[
   {
     "title": "Akira",
     "director": "Katsuhiro Otomo",
     "year": "1988",
     "length": "2h 4m",
-    "mpaa rating": "R",
-    "genre-id": "6",
+    "mpaa_rating": "R",
+    "genre_id": "6",
     "plot": "A secret military project endangers Neo-Tokyo when it turns a biker gang member into a rampaging psychic psychopath who can only be stopped by a teenager, his gang of biker friends and a group of psychics.",
-    "filename": "akira.jpg",
+    "filename": "akira.jpg"
   },
   {
     "title": "The Matrix",
     "director": "The Wachowskis",
     "year": "1999",
     "length": "2h 16m",
-    "mpaa rating": "R",
-    "genre-id": "6",
+    "mpaa_rating": "R",
+    "genre_id": "6",
     "plot": "When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.",
-    "filename": "the_matrix.jpg",
+    "filename": "the_matrix.jpg"
   },
   {
     "title": "The Thing",
     "director": "John Carpenter",
     "year": "1982",
     "length": "1h 49m",
-    "mpaa rating": "R",
-    "genre-id": "6",
+    "mpaa_rating": "R",
+    "genre_id": "6",
     "plot": "A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims.",
-    "filename": "the_thing.jpg",
+    "filename": "the_thing.jpg"
   },
   {
     "title": "Blade Runner",
     "director": "Ridley Scott",
     "year": "1982",
     "length": "1h 50m",
-    "mpaa rating": "R",
-    "genre-id": "6",
+    "mpaa_rating": "R",
+    "genre_id": "6",
     "plot": "A blade runner must pursue and terminate four replicants who stole a ship in space and have returned to Earth to find their creator.",
-    "filename": "blade_runner.jpg",
+    "filename": "blade_runner.jpg"
   },
   {
     "title": "Bladerunner 2049",
     "director": "Denis Villeneuve",
     "year": "2017",
     "length": "2h 43m",
-    "mpaa rating": "R",
-    "genre-id": "6",
+    "mpaa_rating": "R",
+    "genre_id": "6",
     "plot": "Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, who's been missing for thirty years.",
-    "filename": "bladerunner_2049.jpg",
-
+    "filename": "bladerunner_2049.jpg"
   },
   {
     "title": "Her",
     "director": "Spike Jonze",
     "year": "2013",
     "length": "2h 6m",
-    "mpaa rating": "R",
-    "genre-id": "6",
+    "mpaa_rating": "R",
+    "genre_id": "6",
     "plot": "In a near future, a lonely writer develops an unlikely relationship with an operating system designed to meet his every need.",
-    "filename": "her.jpg",
-
+    "filename": "her.jpg"
   },
   {
     "title": "2001: A Space Odyssey",
     "director": "Stanley Kubrick",
     "year": "1968",
     "length": "2h 19m",
-    "mpaa rating": "G",
-    "genre-id": "6",
+    "mpaa_rating": "G",
+    "genre_id": "6",
     "plot": "After uncovering a mysterious artifact buried beneath the Lunar surface, a spacecraft is sent to Jupiter to find its origins: a spacecraft manned by two men and the supercomputer HAL 9000.",
-    "filename": "2001_a_space_odyssey.jpg",
-
+    "filename": "2001_a_space_odyssey.jpg"
   },
   {
     "title": "9",
     "director": "Shane Acker",
     "year": "2009",
     "length": "1h 19m",
-    "mpaa rating": "PG-13",
-    "genre-id": "6",
+    "mpaa_rating": "PG-13",
+    "genre_id": "6",
     "plot": "A rag doll that awakens in a postapocalyptic future holds the key to humanity's salvation.",
-    "filename": "9.jpg",
-
+    "filename": "9.jpg"
   },
   {
     "title": "Search Party",
     "director": "Scot Armstrong",
     "year": "2014",
     "length": "1h 33m",
-    "npaa rating": "R",
-    "genre-id": "2",
+    "mpaa_rating": "R",
+    "genre_id": "2",
     "plot": "A pair of friends embark on a mission to reunite their pal with the woman he was going to marry.",
-    "filename": "search_party.jpg",
+    "filename": "search_party.jpg"
   },
   {
     "title": "Bridesmaids",
     "director": "Paul Feig",
     "year": "2011",
     "length": "2h 5m",
-    "npaa rating": "R",
-    "genre-id": "2",
+    "mpaa_rating": "R",
+    "genre_id": "2",
     "plot": "Competition between the maid of honor and a bridesmaid, over who is the bride's best friend, threatens to upend the life of an out-of-work pastry chef.",
-    "filename": "bridesmaids.jpg",
+    "filename": "bridesmaids.jpg"
   },
   {
     "title": "Good Boys",
     "director": "Gene Stupnitsky",
     "year": "2019",
     "length": "1h 30m",
-    "npaa rating": "R",
-    "genre-id": "2",
+    "mpaa_rating": "R",
+    "genre_id": "2",
     "plot": "Three 6th-grade boys ditch school and embark on an epic journey while carrying accidentally stolen drugs, being hunted by teenage girls, and trying to make their way home in time for a long-awaited party.",
-    "filename": "good_boys.jpg",
+    "filename": "good_boys.jpg"
   },
   {
     "title": "Palm Springs",
     "director": "Max Barbakow",
     "year": "2020",
     "length": "1h 30m",
-    "npaa rating": "R",
-    "genre-id": "2",
+    "mpaa_rating": "R",
+    "genre_id": "2",
     "plot": "Nyles and Sarah find themselves stuck in a time loop and living the same day over and over again. They are drawn to each other but certain revelations threaten their budding romance.",
-    "filename": "palm_springs.jpg",
+    "filename": "palm_springs.jpg"
   },
   {
     "title": "The Hangover",
     "director": "Todd Phillips",
     "year": "2009",
     "length": "1h 40m",
-    "npaa rating": "R",
-    "genre-id": "2",
+    "mpaa_rating": "R",
+    "genre_id": "2",
     "plot": "Three buddies wake up from a bachelor party in Las Vegas, with no memory of the previous night and the bachelor missing. They make their way around the city in order to find their friend before his wedding.",
-    "filename": "the_hangover.jpg",
+    "filename": "the_hangover.jpg"
   },
   {
     "title": "Booksmart",
     "director": "Olivia Wilde",
     "year": "2019",
     "length": "1h 42m",
-    "npaa rating": "R",
-    "genre-id": "2",
+    "mpaa_rating": "R",
+    "genre_id": "2",
     "plot": "On the eve of their high-school graduation, two academic superstars and best friends realize they should have worked less and played more. Determined not to fall short of their peers, the girls try to cram four years of fun into one night.",
-    "filename": "booksmart.jpg",
+    "filename": "booksmart.jpg"
   },
   {
     "title": "Superbad",
     "director": "Max Barbakow",
     "year": "2007",
     "length": "1h 53m",
-    "npaa rating": "R",
-    "genre-id": "2",
+    "mpaa_rating": "R",
+    "genre_id": "2",
     "plot": "Two co-dependent high school seniors are forced to deal with separation anxiety after their plan to stage a booze-soaked party goes awry.",
-    "filename": "superbad.jpg",
+    "filename": "superbad.jpg"
   },
   {
     "title": "City of Angels",
@@ -161,9 +155,9 @@ const movieData = [
     "year": "1998",
     "length": "1h 54m",
     "mpaa_rating": "PG-13",
-    "genre-id": "5",
+    "genre_id": "5",
     "plot": "An angel on Earth, a doctor unable to believe, a patient with a secret, a love story made in Heaven.",
-    "filename": "city_of_angels.jpg",
+    "filename": "city_of_angels.jpg"
   },
   {
     "title": "You've Got Mail",
@@ -171,9 +165,9 @@ const movieData = [
     "year": "1998",
     "length": "1h 59m",
     "mpaa_rating": "PG",
-    "genre-id": "5",
+    "genre_id": "5",
     "plot": "Book superstore magnate Joe Fox and independent book shop owner Kathleen Kelly fall in love in the anonymity of the Internet, both blissfully unaware that he's trying to put her out of business.",
-    "filename": "youve_got_mail.jpg",
+    "filename": "youve_got_mail.jpg"
   },
   {
     "title": "Pearl Harbor",
@@ -181,9 +175,9 @@ const movieData = [
     "year": "2001",
     "length": "3h 03m",
     "mpaa_rating": "PG-13",
-    "genre-id": "5",
-    "plot": "A tale of war and romance mixed in with history. The story follows two lifelong friends and a beautiful nurse who are caught up in the horror of an infamous Sunday morning in 1941.",
-    "filename": "pearl_harbor.jpg",
+    "genre_id": "5",
+    "plot": "A tale of war and romance mixed in with history. The story follows two lifelong friends and a beautiful nurse who are caught up in the 4 of an infamous Sunday morning in 1941.",
+    "filename": "pearl_harbor.jpg"
   },
   {
     "title": "The Lake House",
@@ -191,9 +185,9 @@ const movieData = [
     "year": "2006",
     "length": "1h 39m",
     "mpaa_rating": "PG",
-    "genre-id": "5",
+    "genre_id": "5",
     "plot": "A lonely doctor who once occupied an unusual lakeside house begins to exchange love letters with its former resident, a frustrated architect. They must try to unravel the mystery behind their extraordinary romance before it's too late.",
-    "filename": "the_lake_house.jpg",
+    "filename": "the_lake_house.jpg"
   },
   {
     "title": "Sweet November",
@@ -201,9 +195,9 @@ const movieData = [
     "year": "2001",
     "length": "1h 59m",
     "mpaa_rating": "PG-13",
-    "genre-id": "5",
+    "genre_id": "5",
     "plot": "A workaholic executive, and an unconventional woman agree to a personal relationship for a short period. In this short period she changes his life.",
-    "filename": "sweet_november.jpg",
+    "filename": "sweet_november.jpg"
   },
   {
     "title": "The Notebook",
@@ -211,54 +205,59 @@ const movieData = [
     "year": "2004",
     "length": "2h 03m",
     "mpaa_rating": "PG-13",
-    "genre-id": "5",
+    "genre_id": "5",
     "plot": "An elderly man reads to a woman with dementia the story of two young lovers whose romance is threatened by the difference in their respective social classes.",
-    "filename": "the_notebook.jpg",
+    "filename": "the_notebook.jpg"
   },
   {
     "title": "The Invisible Man",
     "director": "Leigh Whannell",
+    "year": "2020",
     "length": "2h 4m",
-    "mpaa rating": "R",
-    "genre": "Horror",
-    "plot": "Cecilia Kass escapes from her abusive partner, Adrian Griffin, and seeks refuge with her friend and his daughter. She begins to suspect Adrian is still alive and tormenting her through advanced technology, leading to a tense and dangerous confrontation."
+    "mpaa_rating": "R",
+    "genre_id": "4",
+    "plot": "Cecilia Kass escapes from her abusive partner, Adrian Griffin, and seeks refuge with her friend and his daughter. She begins to suspect Adrian is still alive and tormenting her through advanced technology, leading to a tense and dangerous confrontation.",
+    "filename": "the_notebook.jpg"
   },
   {
     "title": "Longlegs",
     "director": "Osgood Perkins",
+    "year": "2024",
     "length": "1h 41m",
-    "mpaa rating": "R",
-    "genre": "Horror",
-    "plot": "In pursuit of a serial killer, an FBI agent uncovers a series of occult clues that she must solve to end his terrifying killing spree."
+    "mpaa_rating": "R",
+    "genre_id": "4",
+    "plot": "In pursuit of a serial killer, an FBI agent uncovers a series of occult clues that she must solve to end his terrifying killing spree.",
+    "filename": "the_notebook.jpg"
   },
   {
     "title": "A Nightmare on Elm Street",
     "director": "Wes Craven",
+    "year": "1994",
     "length": "1h 31m",
-    "mpaa rating": "R",
-    "genre": "Horror",
-    "plot": "Teenager Nancy Thompson must uncover the dark truth concealed by her parents after she and her friends become targets of the spirit of a serial killer with a bladed glove in their dreams, in which if they die, it kills them in real life."
+    "mpaa_rating": "R",
+    "genre_id": "4",
+    "plot": "Teenager Nancy Thompson must uncover the dark truth concealed by her parents after she and her friends become targets of the spirit of a serial killer with a bladed glove in their dreams, in which if they die, it kills them in real life.",
+    "filename": "the_notebook.jpg"
   },
   {
     "title": "The Silence of the Lambs",
     "director": "Jonathan Demme",
+    "year": "1991",
     "length": "1h 58m",
-    "mpaa rating": "R",
-    "genre": "Horror",
-    "plot": "A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims."
+    "mpaa_rating": "R",
+    "genre_id": "4",
+    "plot": "A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.",
+    "filename": "the_notebook.jpg"
   },
   {
     "title": "Sweeney Todd: The Demon Barber of Fleet Street",
     "director": "Tim Burton",
+    "year": "2007",
     "length": "1h 56m",
-    "mpaa rating": "R",
-    "genre": "Horror",
-    "plot": "The legendary tale of a barber who returns from wrongful imprisonment to 1840s London, bent on revenge for the rape and death of his wife, and resumes his trade while forming a sinister partnership with his fellow tenant, Mrs. Lovett."
+    "mpaa_rating": "R",
+    "genre_id": "4",
+    "plot": "The legendary tale of a barber who returns from wrongful imprisonment to 1840s London, bent on revenge for the rape and death of his wife, and resumes his trade while forming a sinister partnership with his fellow tenant, Mrs. Lovett.",
+    "filename": "the_notebook.jpg"
   }
+]
 
-  // Add more movies as needed
-];
-
-const seedMovies = () => Movie.bulkCreate(movieData);
-
-module.exports = seedMovies;
