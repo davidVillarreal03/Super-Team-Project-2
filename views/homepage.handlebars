@@ -1,0 +1,16 @@
+  {{#each genres as |genre|}}
+    <a href = "/genres/{{genre.id}}">
+      <h2><{{genre.name}}</2>
+    </a>
+   {{/each}}
+  <!-- Movie Carousel -->
+  <div class="movie-carousel">
+    <div class="movie-carousel-track">
+      {{#each movies as |movie| }}
+        <a href="/movie/{{movie.id}}">
+        <div class="movie-card">
+          <img src="/images/{{movie.filename}}" alt="{{movie.title}}">
+        </div>
+        </a>
+      {{/each}} 
+  </div>

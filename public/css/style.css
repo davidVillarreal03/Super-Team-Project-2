@@ -1,0 +1,188 @@
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    /* overflow-x: hidden; Prevent horizontal scroll */
+    color: white;
+}
+
+.banner-container {
+    width: 100%;
+    height: 150px; 
+    overflow: hidden;
+    position: relative;
+}
+
+.banner {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.top-picks-label {
+    text-align: center;
+    margin: 0px auto;
+    padding: 0;
+    /* width: fit-content; */
+    background-color: black;
+    color: white;
+    /* border-bottom: 0px solid; */
+    padding-bottom: 0px;
+}
+
+/* Special thanks to Archie Lister for scrolling effect: https://medium.com/@archielister/make-an-infinitely-scrolling-banner-with-html-and-css-e7918506c496*/
+.movie-carousel {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: fit-content;
+    white-space: nowrap;
+    animation: loop 80s linear infinite; /*slowed down from 30s to 80s. Adjust as desired*/
+}
+
+@keyframes loop {
+    0% {transform: translateX(0%);}
+    100% {transform: translateX(-85%);}
+}
+
+.movie-carousel-track {
+    display: flex;
+    /* width: max-content; */
+    animation: scrollMovies 40s linear infinite;
+}
+
+.movie-carousel:hover {
+    animation-play-state: paused;
+    }
+
+.movie-card {
+    background-color: black;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    width: 275px; /*increase the size*/
+    text-align: center;
+    margin: 0 20px;
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+    /* object-fit: cover; */
+}
+
+.card-info {
+    padding: 25px;
+}
+
+.card-info h2 {
+    margin: 10px 0;
+    color: white;
+}
+
+.card-info p {
+    color: #ccc;
+    font-size: 14px;
+
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .movie-carousel {
+        flex-direction: column;
+    }
+
+    .movie-card {
+        width: 100%;
+        max-width: none; /* Remove max-width constraint on smaller screens */
+        margin: 10px 0; /* Adjust margin for vertical stacking */
+    }
+
+    .card-info {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .card-info h2 {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+
+    .card-info p {
+        font-size: 0.8em; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-info h2 {
+        font-size: 0.9em; /* Further adjust font size for very small screens */
+    }
+
+    .card-info p {
+        font-size: 0.7em; /* Further adjust font size for very small screens */
+    }
+}
+
+/* Centering the form container */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+}
+
+/* Styling the form */
+.login-form {
+    width: 100%;
+    max-width: 50px; /* Adjust width as needed */
+    padding: 20px;
+    background-color: #fff; /* Optional: background color for better visibility */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for depth */
+    margin: 0 auto;
+}
+
+/* Styling form fields */
+.login-form .form-control {
+    font-size: 14px; /* Smaller font size */
+    padding: 8px; /* Padding inside the input */
+    margin-bottom: 20px; /* Space between fields */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Styling the submit button */
+.login-form .btn-primary {
+    width: 100%; /* Full width */
+    padding: 10px; /* Adjust padding as needed */
+}

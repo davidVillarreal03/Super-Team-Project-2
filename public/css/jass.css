@@ -1,0 +1,95 @@
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.home-button-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.home-button {
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.home-button:hover {
+    background-color: #555;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('/public/images/pop+reel.png') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    opacity: 0.10; /* Make background slightly transparent */
+}
+
+.nav-links {
+    /* display: absolute; */
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: Blue;
+    font-size: 20px;
+}
+
+.login-form {
+    background: rgba(0, 0, 0, 0.7); /* Dark background with transparency */
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
