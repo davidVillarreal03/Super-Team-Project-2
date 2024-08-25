@@ -68,6 +68,16 @@ body, html {
     width: 100%;
     position: relative;
     background-color: black;
+    animation: scrollBanner 20s linear infinite;
+}
+
+@keyframes scrollBanner {
+    0% {
+        transform: translateX(0); /* Start from the left edge */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to the left off-screen */
+    }
 }
 
 .movie-carousel-track {
