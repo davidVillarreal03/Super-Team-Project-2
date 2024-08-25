@@ -18,7 +18,6 @@ router.get('/', async (req, res) => {
      const movies = movieData.map((movie) => movie.get({ plain: true }));
 
      console.log(movies);
-     console.log('Session:', req.session);
      // Pass serialized data and session flag into template
      res.render('homepage', { 
        movies, 
@@ -43,6 +42,10 @@ router.get('/movie/:id', async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+router.get('/login', (req, res) => {
+  res.render('login'); // This will render login.handlebars
 });
 
 module.exports = router;

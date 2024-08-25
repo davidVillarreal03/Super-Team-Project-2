@@ -106,3 +106,72 @@ body, html {
     color: #ccc;
     font-size: 14px;
 }
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .movie-carousel {
+        flex-direction: column;
+    }
+
+    .movie-card {
+        width: 100%;
+        max-width: none; /* Remove max-width constraint on smaller screens */
+        margin: 10px 0; /* Adjust margin for vertical stacking */
+    }
+
+    .card-info {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .card-info h2 {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+
+    .card-info p {
+        font-size: 0.8em; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-info h2 {
+        font-size: 0.9em; /* Further adjust font size for very small screens */
+    }
+
+    .card-info p {
+        font-size: 0.7em; /* Further adjust font size for very small screens */
+    }
+}
+
+/* Centering the form container */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+}
+
+/* Styling the form */
+.login-form {
+    width: 100%;
+    max-width: 50px; /* Adjust width as needed */
+    padding: 20px;
+    background-color: #fff; /* Optional: background color for better visibility */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for depth */
+    margin: 0 auto;
+}
+
+/* Styling form fields */
+.login-form .form-control {
+    font-size: 14px; /* Smaller font size */
+    padding: 8px; /* Padding inside the input */
+    margin-bottom: 20px; /* Space between fields */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Styling the submit button */
+.login-form .btn-primary {
+    width: 100%; /* Full width */
+    padding: 10px; /* Adjust padding as needed */
+}
