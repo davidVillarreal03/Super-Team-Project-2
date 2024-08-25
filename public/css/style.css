@@ -71,18 +71,7 @@ body, html {
     white-space: nowrap;
     animation: loop 80s linear infinite; /*slowed down from 30s to 80s. Adjust as desired*/
 }
-.fade {
-    width: 100%;
-    position: absolute;
-    background: linear-gradient(
-        90deg,
-        #000,
-        transparent 30%,
-        transparent 90%,
-        #000
-    );
-    inset: 0;
-}
+
 @keyframes loop {
     0% {transform: translateX(0%);}
     100% {transform: translateX(-85%);}

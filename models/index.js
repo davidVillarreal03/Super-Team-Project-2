@@ -1,6 +1,7 @@
 const User = require('./User');
 const Movie = require('./Movie');
 const Favorite = require('./Favorite');
+const Genre = require('./Genre');
 
 // A User has many Movies
 User.belongsToMany(Movie, { 
@@ -20,8 +21,13 @@ Movie.belongsToMany(User, {
   foreignKey: "movie_id" 
 });
 
+Movie.belongsTo(Genre, {
+  foreignKey: "genre_id"
+})
+
 module.exports = {
   User,
   Movie,
+  Genre,
   Favorite
 };
