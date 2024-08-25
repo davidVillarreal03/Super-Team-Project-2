@@ -217,7 +217,7 @@
     "mpaa_rating": "R",
     "genre_id": "4",
     "plot": "Cecilia Kass escapes from her abusive partner, Adrian Griffin, and seeks refuge with her friend and his daughter. She begins to suspect Adrian is still alive and tormenting her through advanced technology, leading to a tense and dangerous confrontation.",
-    "filename": "the_notebook.jpg"
+    "filename": "the_invisible_man.jpg"
   },
   {
     "title": "Longlegs",
@@ -227,7 +227,7 @@
     "mpaa_rating": "R",
     "genre_id": "4",
     "plot": "In pursuit of a serial killer, an FBI agent uncovers a series of occult clues that she must solve to end his terrifying killing spree.",
-    "filename": "the_notebook.jpg"
+    "filename": "longlegs.jpg"
   },
   {
     "title": "A Nightmare on Elm Street",
@@ -237,7 +237,7 @@
     "mpaa_rating": "R",
     "genre_id": "4",
     "plot": "Teenager Nancy Thompson must uncover the dark truth concealed by her parents after she and her friends become targets of the spirit of a serial killer with a bladed glove in their dreams, in which if they die, it kills them in real life.",
-    "filename": "the_notebook.jpg"
+    "filename": "nightmare_on_elm.jpg"
   },
   {
     "title": "The Silence of the Lambs",
@@ -247,7 +247,7 @@
     "mpaa_rating": "R",
     "genre_id": "4",
     "plot": "A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.",
-    "filename": "the_notebook.jpg"
+    "filename": "silence.jpg"
   },
   {
     "title": "Sweeney Todd: The Demon Barber of Fleet Street",
@@ -257,7 +257,7 @@
     "mpaa_rating": "R",
     "genre_id": "4",
     "plot": "The legendary tale of a barber who returns from wrongful imprisonment to 1840s London, bent on revenge for the rape and death of his wife, and resumes his trade while forming a sinister partnership with his fellow tenant, Mrs. Lovett.",
-    "filename": "the_notebook.jpg"
+    "filename": "sweeney_todd.jpg"
   }
 ]
 
