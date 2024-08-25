@@ -33,10 +33,10 @@ Movie.init(
     },
     genre_id: {
       type: DataTypes.INTEGER,
-      // references: {
-      //   model: 'genre',
-      //   key: 'id',
-      // }
+      references: {
+        model: 'genre',
+        key: 'id',
+      }
     },
     plot: {
       type: DataTypes.TEXT,
