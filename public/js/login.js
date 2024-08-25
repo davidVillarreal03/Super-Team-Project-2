@@ -12,11 +12,11 @@ const loginFormHandler = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/');
+            document.location.replace('/movies');
         } else {
             alert('Failed to log in');
         }
     }
 };
 
-document.querySelector('#loginModel').addEventListener('submit', loginFormHandler);
+document.querySelector('#loginForm').addEventListener('submit', loginFormHandler);

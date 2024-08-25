@@ -44,4 +44,8 @@ router.get('/movie/:id', async (req, res) => {
   }
 });
 
+router.get('/login', (req, res) => {
+  res.render('login'); // This will render login.handlebars
+});
+
 module.exports = router;

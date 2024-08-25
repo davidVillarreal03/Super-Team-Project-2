@@ -18,7 +18,7 @@
   <div class="header">
     <h1>Welcome to Reel Bites</h1>
     <div class="nav-links">
-      <a href="login.handlebars" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+      <a href="/login" class="btn btn-primary">Login</a>
     </div>
   </div>
 
@@ -27,7 +27,7 @@
     <h2>Top Picks Today</h2>
     {{{ body }}}
   </div>
-
+{{!-- 
   <!-- Login Modal -->
   <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -39,7 +39,7 @@
         <div class="modal-body">
           <form>
             <div class="mb-3">
-              <label for="username" class="form-label">Email</label>
+              <label for="email" class="form-label">Email</label>
               <input type="text" class="form-control" id="email-login" placeholder="Enter your email">
             </div>
             <div class="mb-3">
@@ -54,7 +54,8 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> --}}
+
   <script src="/js/login.js"></script>
 </body>
 </html>
