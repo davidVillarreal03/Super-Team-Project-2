@@ -93,6 +93,10 @@ body, html {
     animation: scrollMovies 40s linear infinite;
 }
 
+.movie-carousel:hover {
+    animation-play-state: paused;
+    }
+
 .movie-card {
     background-color: black;
     border-radius: 8px;
