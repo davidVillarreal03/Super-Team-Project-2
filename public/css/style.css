@@ -17,7 +17,6 @@ body, html {
     height: 150px; /* Adjust the height as needed */
     overflow: hidden;
     position: relative;
-    background: url('popCorn&reel.png') repeat-x; /* Set the banner image */
     background-size: cover; /* Cover the entire banner area */
 }
 
@@ -28,16 +27,6 @@ body, html {
     position: absolute;
     top: 0;
     left: 0;
-    animation: scrollBanner 20s linear infinite;
-}
-
-@keyframes scrollBanner {
-    0% {
-        transform: translateX(0); /* Start from the left edge */
-    }
-    100% {
-        transform: translateX(-100%); /* Move to the left off-screen */
-    }
 }
 
 .header {
