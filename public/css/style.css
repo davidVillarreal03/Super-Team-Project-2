@@ -68,7 +68,7 @@ body, html {
     justify-content: space-around;
     width: fit-content;
     white-space: nowrap;
-    animation: loop 30s linear infinite;
+    animation: loop 80s linear infinite; /*slowed down from 30s to 80s. Adjust as desired*/
 }
 .fade {
     width: 100%;
@@ -90,7 +90,7 @@ body, html {
 .movie-carousel-track {
     display: flex;
     /* width: max-content; */
-    /* animation: scrollMovies 20s linear infinite; */
+    animation: scrollMovies 40s linear infinite;
 }
 
 .movie-card {
@@ -98,9 +98,9 @@ body, html {
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
     overflow: hidden;
-    width: 200px;
+    width: 275px; /*increase the size*/
     text-align: center;
-    margin: 0 10px;
+    margin: 0 20px;
 }
 
 .movie-card img {
@@ -110,7 +110,7 @@ body, html {
 }
 
 .card-info {
-    padding: 15px;
+    padding: 25px;
 }
 
 .card-info h2 {

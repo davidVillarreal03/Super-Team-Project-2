@@ -2,10 +2,9 @@
   <div class="movie-carousel">
     <div class="movie-carousel-track">
       {{#each movies as |movie| }}
-      <div class="movie-card">
-        <img src="./images/{{movie.filename}}" alt="{{movie.title}}">
-      </div>
-      <div class='fade'></div>
-    {{/each}}
-    </div>
+        <div class="movie-card">
+          <img src="/images/{{movie.filename}}" alt="{{movie.title}}">
+        </div>
+      {{/each}}
+    <div class='fade'></div>    
   </div>
