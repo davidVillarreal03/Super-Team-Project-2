@@ -22,7 +22,7 @@ Genre.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'genre',
-  }
+  },
 );
 
 module.exports = Genre;
