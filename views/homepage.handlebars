@@ -1,29 +1,53 @@
-  <div class="banner-container">
-    <img src="./images/banner.png" alt="Banner 3" class="banner">
-  </div>
+<div class="banner-container">
+  <img src="./images/banner.png" alt="Banner 3" class="banner">
+</div>
+<div class="header">
+  <h1>Welcome to Reel Bites</h1>
 
-  <div class="header">
-    <h1>Welcome to Reel Bites</h1>
-  </div>
 
-  <!-- Top Picks Label -->
-  <div class="top-picks-label">
-    <h2>Top Picks Today</h2>
-  </div>
+<!-- Genre Dropdown -->
+<div class="dropdown">
+    <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Choose Your Genre!
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    {{#each genres as |genre|}}
+    <li>
+      <a class="dropdown-item" href="/genres/{{genre.id}}">
+        <h2>{{genre.genre_name}}</h2>
+      </a>
+    </li>
+    {{/each}}
+    </ul>
+    </div>
+    </div>
+{{!-- <nav class="navbar">
+  <form class="container-fluid">
+    {{#each genres as |genre|}}
+    <button class="btn me-2 genre-btn" type="button">
+      <a href="/genres/{{genre.id}}">
+        <h2>{{genre.genre_name}}</h2>
+      </a>
+    </button>
+    {{/each}}
+  </form>
+</nav> --}}
 
-  {{#each genres as |genre|}}
-    <a href = "/genres/{{genre.id}}">
-      <h2><{{genre.name}}</2>
+<!-- Top Picks Label -->
+<div class="top-picks-label">
+  <h2>Top Picks Today</h2>
+</div>
+
+
+
+<!-- Movie Carousel -->
+<div class="movie-carousel">
+  <div class="movie-carousel-track">
+    {{#each movies as |movie| }}
+    <a href="/movie/{{movie.id}}">
+      <div class="movie-card">
+        <img src="/images/{{movie.filename}}" alt="{{movie.title}}">
+      </div>
     </a>
-   {{/each}}
-  <!-- Movie Carousel -->
-  <div class="movie-carousel">
-    <div class="movie-carousel-track">
-      {{#each movies as |movie| }}
-        <a href="/movie/{{movie.id}}">
-        <div class="movie-card">
-          <img src="/images/{{movie.filename}}" alt="{{movie.title}}">
-        </div>
-        </a>
-      {{/each}} 
+    {{/each}}
   </div>
