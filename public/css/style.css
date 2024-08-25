@@ -6,7 +6,7 @@
 }
 
 body, html {
-    font-family: Arial, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: black;
     /* overflow-x: hidden; Prevent horizontal scroll */
     color: #ccc;
@@ -35,8 +35,13 @@ body, html {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: black;
     color: #ccc;
+}
+
+.header h1 {
+    font-weight: 1000;
 }
 
 .nav-links {
@@ -44,6 +49,8 @@ body, html {
     float: right;
     gap: 20px;
     background-color: black;
+    width: 100%;
+    padding-left: 90%;
 }
 
 .nav-links a {
@@ -55,6 +62,7 @@ body, html {
 }
 
 .top-picks-label {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
     margin: 0px auto;
     padding: 0;
@@ -62,7 +70,7 @@ body, html {
     background-color: black;
     color: #ccc;
     /* border-bottom: 0px solid; */
-    padding-bottom: 0px;
+    padding-bottom: 10px;
 }
 
 /* Special thanks to Archie Lister for scrolling effect: https://medium.com/@archielister/make-an-infinitely-scrolling-banner-with-html-and-css-e7918506c496*/
@@ -107,6 +115,37 @@ body, html {
     /* object-fit: cover; */
 }
 
+/* .navbar {
+    background-color: black;
+    width: 100%;
+}
+
+.container-fluid {
+    width: 600px;
+}
+
+.genre-btn {
+    width: 100px;
+    height: 60px;
+    background: radial-gradient(circle at 12.3% 19.3%, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%);
+    border-color: #03045e;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 10px;  
+    display: inline;
+}
+
+.genre-btn a {
+    background-color: black;
+    text-decoration: none;
+    color: #000000;
+}
+.genre-btn h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000000;
+} */
 /*.card-info {
     padding: 25px;
 }

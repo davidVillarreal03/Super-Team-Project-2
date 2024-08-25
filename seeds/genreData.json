@@ -1,6 +1,6 @@
 [
   { 
-    "id": "1"
+    "id": "1",
     "genre_name": "Action / Adventure"
   },
   { 
@@ -19,7 +19,8 @@
     "id": "5", 
     "genre_name": "Romance" 
   },
-  { "id": "6", 
-  "genre_name": "Sci-fi" 
+  { 
+    "id": "6", 
+    "genre_name": "Sci-fi" 
   }
 ]

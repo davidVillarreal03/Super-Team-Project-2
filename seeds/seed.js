@@ -3,7 +3,7 @@ const { User, Movie, Genre } = require('../models');
 
 const userData = require('./userData.json');
 const movieData = require('./movieData.json');
-const genreseeds = require('./genreseeds.json');
+const genreseeds = require('./genreData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
