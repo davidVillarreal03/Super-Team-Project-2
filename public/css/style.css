@@ -60,29 +60,36 @@ body, html {
     padding-bottom: 0px;
 }
 
+/* Special thanks to Archie Lister for scrolling effect: https://medium.com/@archielister/make-an-infinitely-scrolling-banner-with-html-and-css-e7918506c496*/
 .movie-carousel {
-    margin: 0;
-    padding: 0;
+    background: #000;
     display: flex;
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-    background-color: black;
-    animation: scrollBanner 20s linear infinite;
+    align-items: center;
+    justify-content: space-around;
+    width: fit-content;
+    white-space: nowrap;
+    animation: loop 30s linear infinite;
 }
-
-@keyframes scrollBanner {
-    0% {
-        transform: translateX(0); /* Start from the left edge */
-    }
-    100% {
-        transform: translateX(-100%); /* Move to the left off-screen */
-    }
+.fade {
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(
+        90deg,
+        #000,
+        transparent 30%,
+        transparent 90%,
+        #000
+    );
+    inset: 0;
+}
+@keyframes loop {
+    0% {transform: translateX(0%);}
+    100% {transform: translateX(-85%);}
 }
 
 .movie-carousel-track {
     display: flex;
-    width: max-content;
+    /* width: max-content; */
     /* animation: scrollMovies 20s linear infinite; */
 }
 
@@ -99,7 +106,7 @@ body, html {
 .movie-card img {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    /* object-fit: cover; */
 }
 
 .card-info {
