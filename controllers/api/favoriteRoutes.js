@@ -21,4 +21,57 @@ const { Favorite } = require('../../models');
 //     });
 // });
 
+// GET all favorites for a user
+router.get('/', async (req, res) => {
+    if (req.session.logged_in) {
+      try {
+        const favorites = await Favorite.findAll({ where: { user_id: req.session.user_id } });
+        res.status(200).json(favorites);
+      } catch (err) {
+        res.status(500).json(err);
+      }
+    } else {
+      res.status(401).json({ message: 'Not logged in' });
+    }
+  });
+  
+  // POST a new favorite
+  router.post('/', async (req, res) => {
+    if (req.session.logged_in) {
+      try {
+        const newFavorite = await Favorite.create({
+          ...req.body,
+          user_id: req.session.user_id
+        });
+        res.status(200).json(newFavorite);
+      } catch (err) {
+        res.status(400).json(err);
+      }
+    } else {
+      res.status(401).json({ message: 'Not logged in' });
+    }
+  });
+  
+  // DELETE a favorite
+  router.delete('/:id', async (req, res) => {
+    if (req.session.logged_in) {
+      try {
+        const result = await Favorite.destroy({
+          where: { id: req.params.id, user_id: req.session.user_id }
+        });
+        if (result) {
+          res.status(200).json({ message: 'Favorite removed' });
+        } else {
+          res.status(404).json({ message: 'Favorite not found' });
+        }
+      } catch (err) {
+        res.status(500).json(err);
+      }
+    } else {
+      res.status(401).json({ message: 'Not logged in' });
+    }
+  });
+  
+  module.exports = router;
+
 module.exports = router;

@@ -35,7 +35,7 @@ User.init(
       allowNull: false,
       validate: {
         len: [8],
-      }
+      },
     },
   },
   {
@@ -51,7 +51,7 @@ User.init(
     //freezeTableName: true,
     underscored: true,
     modelName: 'user'
-  }
+  },
 );
 
 module.exports = User;
