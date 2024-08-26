@@ -15,28 +15,25 @@
   <div class="main-header">
     <h1>Reel Bites</h1>
     <img src="./images/reelbites_logo_1.png" alt="Reel Bites Logo">
-    <button><a href="/login">Login/Sign Up</a></button>
+  {{#if logged_in}}
+  <a href="#">
+    <button class="btn" id="logout">Logout</button>
+  </a>
+  {{else}}
+  <a href="/login">
+    <button class="btn" id="login">Login/Sign Up</button>
+  </a>
+  {{/if}}
   </div>
   
   <div class="banner-container">
     <img src="./images/banner.png" alt="Banner 3" class="banner">
   </div>
 
-
-
-
-  {{#if logged_in}}
-  <nav>
-    <button class="btn" id="logout"></button>
-  </nav>
-  {{/if}}
-
   <div>
     {{{ body }}}
   </div>
 
-  {{!--
-  <script src="/js/login.js"></script> --}}
 </body>
 
 </html>

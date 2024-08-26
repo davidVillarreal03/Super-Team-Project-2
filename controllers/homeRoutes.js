@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Movie, User, Genre } = require('../models');
+const { Movie, User, Genre, Favorite } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -42,7 +42,18 @@ router.get('/login', async (req, res) => {
 });
 
 router.get('/favorite', async (req, res) => {
-  res.render('favorites');
+  if (req.session.logged_in) {
+    try {
+      const favorites = await Favorite.findAll({ where: { id: req.session.user_id } });
+      
+      res.status(200).render("favorites",{favorites,logged_in: req.session.logged_in});
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  } else {
+    res.status(401).redirect("/login");
+  }
 });
 
 router.get('/genres/:id', async (req, res) => {
