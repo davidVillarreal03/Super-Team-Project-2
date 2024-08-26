@@ -4,9 +4,9 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    // Get all movies and JOIN with genre data
-    const genreData = await Genre.findAll();
+    // Get all projects and JOIN with user data
     const movieData = await Movie.findAll();
+    const genreData = await Genre.findAll();
 
     // Serialize data so the template can read it
     const movies = movieData.map((movie) => movie.get({ plain: true }));

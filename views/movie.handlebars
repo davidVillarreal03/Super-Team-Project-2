@@ -1,20 +1,26 @@
-<div class="movie-card">
-  <div class="movie-card-header">
-    {{title}}
+
+<div class="movie-by-id">
+  <div>
+    <h1>{{title}}</h1>
   </div>
-  <div class="card-body">
+  <div class="poster">
+      <img src="/images/{{filename}}" alt="{{title}}">
+  </div>
+  <div>
     <p>
-      Description:
-      {{plot}}
+      <span>Description</span>: {{plot}}
     </p>
-  </div>
+    <p>
+      <span>Director</span>: {{director}}
+    </p>
+    <p>
+      <span>Release Year</span>: {{year}}
+    </p>
+    <p>
+      <span>Length</span>: {{length}}
+    </p>
+    <p>
+    <span>Rated</span>: {{mpaa_rating}}
+    </p>
+    </div>
 </div>
-
-
-
-
-
-
-
-
-
