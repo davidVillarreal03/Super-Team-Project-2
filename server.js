@@ -4,18 +4,14 @@ const path = require('path');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
-const helpers = require('../../MVC - 28 - MiniProject Solved/utils/helpers');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Set up Handlebars.js engine with custom helpers
-const hbs = exphbs.create({ helpers });
-
 // Configure session middleware
 const sess = {
-  secret: 'Super secret secret',
+  secret: 'Super secret secret', //eventuall should be process.env so people don't know our secret but wait on this so we can talk as a group...
   cookie: {
     maxAge: 300000, // Session will expire after 5 minutes (300000 milliseconds)
     httpOnly: true,
@@ -33,7 +29,7 @@ const sess = {
 app.use(session(sess));
 
 // Set up Handlebars.js as the template engine
-app.engine('handlebars', hbs.engine);
+app.engine('handlebars', exphbs.engine());
 app.set('view engine', 'handlebars');
 
 // Middleware for parsing JSON and URL-encoded form data
