@@ -44,29 +44,25 @@ body, html {
   padding-left: 430px;
 }
 
-.main-header button {
+.main-header .btn {
   position: relative;
   float: right;
   gap: 20px;
   background-color: black;
-  padding: 10px;
-  padding-top: 30px;
   width: 200px;
   border: none;
-}
-
-.main-header a {
   text-decoration: none;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: #ccc;
   font-size: 25px;
+  top: 22px;
+  right: 5px;
 }
 
-.main-header a:hover{
+.main-header .btn:hover{
  background-color: #dc3546;
  color: black;
  border-radius: 7px;
- padding: 10px;
 }
 
 .banner {
@@ -91,6 +87,10 @@ body, html {
 .homepage-header h1 {
   font-weight: 1000;
   padding-right: 680px;
+}
+
+.dropdown .btn {
+  color: black;
 }
 
 .top-picks-label {

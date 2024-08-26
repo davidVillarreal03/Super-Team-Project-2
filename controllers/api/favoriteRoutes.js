@@ -22,18 +22,18 @@ const { Favorite } = require('../../models');
 // });
 
 // GET all favorites for a user
-router.get('/', async (req, res) => {
-    if (req.session.logged_in) {
-      try {
-        const favorites = await Favorite.findAll({ where: { user_id: req.session.user_id } });
-        res.status(200).json(favorites);
-      } catch (err) {
-        res.status(500).json(err);
-      }
-    } else {
-      res.status(401).json({ message: 'Not logged in' });
-    }
-  });
+// router.get('/', async (req, res) => {
+//     if (req.session.logged_in) {
+//       try {
+//         const favorites = await Favorite.findAll({ where: { id: req.session.user_id } });
+//         res.status(200).render("favorites",{favorites,logged_in: req.session.logged_in});
+//       } catch (err) {
+//         res.status(500).json(err);
+//       }
+//     } else {
+//       res.status(401).json({ message: 'Not logged in' });
+//     }
+//   });
   
   // POST a new favorite
   router.post('/', async (req, res) => {

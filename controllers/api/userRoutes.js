@@ -52,11 +52,12 @@ router.post('/', async (req, res) => {
     res.status(400).json(err);
   }
 });
+
 // Login
 router.post('/login', async (req, res) => {
   try {
-    const userData = await User.findOne({ where: {username: req.body.username } });
-
+    const userData = await User.findOne({ where: {email: req.body.email } });
+   
     if (!userData) {
       console.log('user not found');
       res
@@ -79,13 +80,11 @@ router.post('/login', async (req, res) => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
 
-      res.json({ message: 'Login successful', redirect: '/movies' });
+      res.redirect("/favorite");
     });
 
-    //   res.json({ user: userData, message: 'You are now logged in!' });
-    // });
-
   } catch (err) {
+    console.log(err)
     res.status(400).json({ message: 'Failed to log in' });
   }
 });
