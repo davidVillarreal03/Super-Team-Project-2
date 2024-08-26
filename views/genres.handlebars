@@ -1,0 +1,7 @@
+{{#each movies as |movie|}}
+  <a href='/movie/{{movie.id}}'>
+    <div class='movie-card'>
+      <img src='/images/{{movie.filename}}' alt='{{movie.title}}' />
+    </div>
+  </a>
+{{/each}}
