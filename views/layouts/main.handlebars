@@ -16,12 +16,18 @@
 
   <!-- Header with Navigation Links -->
   <div class="header">
-    <h1>Welcome to Reel Bites</h1>
+    <h1>Reel Bites</h1>
     <div class="nav-links">
       {{!-- <a href="/login" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a> --}}
       <a href="/login">Login/Sign Up</a>
     </div>
   </div>
+
+    {{#if logged_in}}
+    <nav>
+      <button class="btn" id="logout"></button>
+    </nav>
+    {{/if}}
 
   <!-- Top Picks Label -->
   <div class="top-picks-label">

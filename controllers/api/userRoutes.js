@@ -79,18 +79,18 @@ router.post('/login', async (req, res) => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
 
-      console.log('Login successful, redirecting to /movies');
-      res.redirect('/movies'); 
+      res.json({ message: 'Login successful', redirect: '/movies' });
     });
-      
+
     //   res.json({ user: userData, message: 'You are now logged in!' });
     // });
 
   } catch (err) {
-    res.status(400).json(err);
+    res.status(400).json({ message: 'Failed to log in' });
   }
 });
 
+// log out
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
