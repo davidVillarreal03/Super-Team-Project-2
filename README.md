@@ -1,38 +1,31 @@
-# Super-Team-Project-2
-<!-- Need to come up with title for our project -->
-## license
-![License: MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)
+# Reel Bites  
+Reel Bites is a dynamic platform built using Node.js that allows users to explore a vast collection of movies. Users can browse through movie listings, which display detailed information such as pictures, descriptions, duration, genre and titles. The application supports user authentication, enabling users to create accounts, log in, and manage their preferences.
 
 
+## User Story
+As a movie enthusiast,  
 
-## Description
+I want to browse a variety of movies and view detailed information about each one, including the title, pictures, descriptions, and duration of it,  
 
-To be edited
-
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
+So that I can discover new movies and decide what to watch.  
 
 ## Installation
-
-To be edited
+???
 
 ## Usage
 
-To be edited
+????
 
-## Credits
+## Credits  
 
-List your collaborators, if any, with links to their GitHub profiles.
+Special thanks to our TA's Gerard Menella, Mark Alfano and tutors for giving us support. 
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+Developers:
+1. David Villareal = https://github.com/davidVillarreal03
+2. Hannah Mancill - https://github.com/mancillh
+3. Rachel Burgos - https://github.com/rmburgos
+4. Susana Soto - https://github.com/ssoto83
 
-If you followed tutorials, include links to those here as well.
 
 ## License
 https://choosealicense.com/licenses/mit/
@@ -71,13 +64,21 @@ If your project has a lot of features, list them here.
 
 ## How to Contribute
 
-To be edited
+???
 
 ## Tests
 
-To be edited
+???
+
+## Mock-up  
+
+![Reel Bites Homepage](/public/images/readme_homepage.png)  
+
+![Reel Bites loginpage](/public/images/readme_login.png)  
+
+![Reel Bites logoutpage](/public/images/readme_logout.png)  
 
 ## Questions
 For questions about the project, you can reach me via:
-- GitHub: [To be edited](https://github.com/To be edited)
-- Email: To be edited
+- GitHub: (https://github.com/davidVillarreal03/super-team-project-2.git)
+- Email: team6@email.com
