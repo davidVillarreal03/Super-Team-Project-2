@@ -8,7 +8,7 @@
 body, html {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   background-color: black;
-  /* overflow-x: hidden; Prevent horizontal scroll */
+  overflow-x: hidden; /*Prevent horizontal scroll*/
   color: #ccc;
 }
 
