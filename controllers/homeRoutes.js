@@ -23,7 +23,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/movie/:id', async (req, res) => {
+router.get('/movies/:id', async (req, res) => {
   try {
     const movieData = await Movie.findByPk(req.params.id, {});
 
@@ -41,18 +41,22 @@ router.get('/login', async (req, res) => {
   res.render('login');
 });
 
-router.get('/favorite', async (req, res) => {
+router.get('/favorites', async (req, res) => {
   if (req.session.logged_in) {
     try {
-      const favorites = await Favorite.findAll({ where: { id: req.session.user_id } });
-      
-      res.status(200).render("favorites",{favorites,logged_in: req.session.logged_in});
+      const favorites = await Favorite.findAll({
+        where: { id: req.session.user_id },
+      });
+
+      res
+        .status(200)
+        .render('favorites', { favorites, logged_in: req.session.logged_in });
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
     }
   } else {
-    res.status(401).redirect("/login");
+    res.status(401).redirect('/login');
   }
 });
 
@@ -60,7 +64,7 @@ router.get('/genres/:id', async (req, res) => {
   // try {
   const movieData = Movie.findAll({
     where: {
-      genre_id: req.params.id,
+      id: req.params.id,
     },
   });
   const movies = movieData.map((movie) => movie.get({ plain: true }));
