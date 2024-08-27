@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
     // Serialize data so the template can read it
     const movies = movieData.map((movie) => movie.get({ plain: true }));
     const genres = genreData.map((genre) => genre.get({ plain: true }));
-    console.log(movies);
+    
     // Pass serialized data and session flag into template
     res.render('homepage', {
       movies,
@@ -26,9 +26,7 @@ router.get('/', async (req, res) => {
 router.get('/movie/:id', async (req, res) => {
   try {
     const movieData = await Movie.findByPk(req.params.id, {});
-
     const movie = movieData.get({ plain: true });
-
     res.render('movie', {
       ...movie,
     });
@@ -41,9 +39,7 @@ router.get('/login', async (req, res) => {
   res.render('login');
 });
 
-router.get('/favorite', async (req, res) => {
-  console.log(req.session, '============================================');
-  console.log(req.session, '============================================');
+router.get('/api/favorite', async (req, res) => {
   if (req.session.logged_in) {
     console.log('inside if statement');
     try {

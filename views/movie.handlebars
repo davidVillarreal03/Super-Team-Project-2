@@ -1,4 +1,7 @@
 <div class='movie-by-id'>
+  <a href='/'>
+    <button class="btn">Return Home</button>
+  </a>
   <div>
     <h1>{{title}}</h1>
   </div>
@@ -26,5 +29,9 @@
       <span>Rated</span>:
       {{mpaa_rating}}
     </p>
+  
+    <button type="button" data-id="${{movie.id}}" class="btn" id="favorite-btn">+</button>
+    
   </div>
 </div>
+

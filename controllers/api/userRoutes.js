@@ -83,7 +83,7 @@ router.post('/login', async (req, res) => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
 
-      res.redirect('/favorite');
+      res.redirect('/api/favorite');
     });
   } catch (err) {
     console.log(err);

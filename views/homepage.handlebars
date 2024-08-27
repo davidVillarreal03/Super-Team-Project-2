@@ -3,24 +3,29 @@
 </div> --}}
 <div class="homepage-header">
   <h1>Welcome to Reel Bites</h1>
+  {{#if logged_in}}
+  <a href='/api/favorite'>
+    <button class='btn favorite-btn'>Favorites</button>
+  </a>
+  {{/if}}
 
-
-<!-- Genre Dropdown -->
-<div class="dropdown">
-    <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    Choose Your Genre!
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    {{#each genres as |genre|}}
-    <li>
-      <a class="dropdown-item" href="/genres/{{genre.id}}">
-        <h2>{{genre.genre_name}}</h2>
-      </a>
-    </li>
-    {{/each}}
+  <!-- Genre Dropdown -->
+  <div class="dropdown">
+    <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+      aria-expanded="false">
+      Choose Your Genre!
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      {{#each genres as |genre|}}
+      <li>
+        <a class="dropdown-item" href="/genres/{{genre.id}}">
+          <h2>{{genre.genre_name}}</h2>
+        </a>
+      </li>
+      {{/each}}
     </ul>
-    </div>
-    </div>
+  </div>
+</div>
 {{!-- <nav class="navbar">
   <form class="container-fluid">
     {{#each genres as |genre|}}
