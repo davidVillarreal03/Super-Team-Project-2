@@ -42,10 +42,12 @@ router.get('/login', async (req, res) => {
 });
 
 router.get('/favorite', async (req, res) => {
+  console.log(req.session, "============================================")
   if (req.session.logged_in) {
+    console.log("inside if statement")
     try {
       const favorites = await Favorite.findAll({ where: { id: req.session.user_id } });
-      
+
       res.status(200).render("favorites",{favorites,logged_in: req.session.logged_in});
     } catch (err) {
       console.log(err);

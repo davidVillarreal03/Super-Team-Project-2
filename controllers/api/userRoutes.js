@@ -8,7 +8,7 @@ router.put('/:id', async (req, res) => {
       where: {
         id: req.params.id,
       },
-      individualHooks: true
+      individualHooks: true,
     });
     if (!userData[0]) {
       res.status(404).json({ message: 'No user with this id!' });
@@ -40,24 +40,27 @@ router.delete('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
   try {
-    const userData = await User.create(req.body);
-
-    req.session.save(() => {
-      req.session.user_id = userData.id;
-      req.session.logged_in = true;
-
-      res.status(200).json(userData);
+    const userData = await User.create({
+      name: req.body.name,
+      email: req.body.email,
+      password: req.body.password,
     });
-  } catch (err) {
-    res.status(400).json(err);
-  }
+    
+      req.session.save(() => {
+        req.session.logged_in = true,
+        req.session.user_id = userData.id
+        res.status(200).json(userData)
+      }) 
+  } catch (err) {res.json(err)}
+
 });
+  
 
 // Login
 router.post('/login', async (req, res) => {
   try {
-    const userData = await User.findOne({ where: {email: req.body.email } });
-   
+    const userData = await User.findOne({ where: { email: req.body.email } });
+
     if (!userData) {
       console.log('user not found');
       res
@@ -80,17 +83,17 @@ router.post('/login', async (req, res) => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
 
-      res.redirect("/favorite");
+      res.redirect('/favorite');
     });
-
   } catch (err) {
-    console.log(err)
+    console.log(err);
     res.status(400).json({ message: 'Failed to log in' });
   }
 });
 
 // log out
 router.post('/logout', (req, res) => {
+  console.log('post route', req.session);
   if (req.session.logged_in) {
     req.session.destroy(() => {
       res.status(204).end();
