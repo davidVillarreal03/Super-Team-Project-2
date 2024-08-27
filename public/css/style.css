@@ -155,6 +155,54 @@ body, html {
   -webkit-filter: grayscale(0);
 }
 
+.double-form-container {
+  flex: 2;
+  height: 90%;
+  background-color: black;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  background-color: #000;
+  margin: 0 0 20px 0;
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 5px;
+  border: 3px solid var(--dark);
+  border-radius: var(--border-radius);
+  border-style: double;
+  border-width: thick;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #ccc;
+}
+
+.signup-container {
+  margin: 0 0 20px 0;
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 5px;
+  border: 3px solid var(--dark);
+  border-radius: var(--border-radius);
+  border-style: double;
+  border-width: thick;
+  background-color: #000;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #ccc;
+}
+
+.form-logo {
+  height:400px;
+}
+form .btn {
+ background-color: #dc3546;
+ margin-top: 10px;
+ margin-bottom: 10px;
+}
+
+
 
 /* All of the styling below was for making Genre buttons instead of dropdown
 
