@@ -1,33 +1,67 @@
-# Reel Bites  
+# Reel Bites
+
 Reel Bites is a dynamic platform built using Node.js that allows users to explore a vast collection of movies. Users can browse through movie listings, which display detailed information such as pictures, descriptions, duration, genre and titles. The application supports user authentication, enabling users to create accounts, log in, and manage their preferences.
 
-
 ## User Story
-As a movie enthusiast,  
 
-I want to browse a variety of movies and view detailed information about each one, including the title, pictures, descriptions, and duration of it,  
+As a movie enthusiast,
 
-So that I can discover new movies and decide what to watch.  
+I want to browse a variety of movies and view detailed information about each one, including the title, pictures, descriptions, and duration of it,
+
+So that I can discover new movies and decide what to watch.
+
+## Tasks Completed
+
+- Usde Node.js and Express.js to create a RESTful API.
+
+- Implemented Handlebars.js as the template engine.
+
+- Created database with PostgreSQL and the Sequelize ORM.
+
+- Created both GET and POST routes for retrieving and adding new data.
+
+- Implemented SHARP npm package for image handling.
+
+- Implemented a folder structure that meets the MVC paradigm.
+
+- Included authentication (express-session and cookies).
+
+- Protected API keys and sensitive information with environment variables.
+
+- Deployed using Render
 
 ## Installation
-???
+
+Navigate to <https://reelbites.onrender.com> to view live project.
 
 ## Usage
 
-????
+![Reel Bites Homepage](/public/images/readme_homepage.png)
 
-## Credits  
+![Reel Bites loginpage](/public/images/readme_login.png)
 
-Special thanks to our TA's Gerard Menella, Mark Alfano and tutors for giving us support. 
+![Reel Bites logoutpage](/public/images/readme_logout.png)
+
+## Credits
+
+Special thanks to our TA's Gerard Menella, Mark Alfano and tutors for giving us support.
+
+<https://sequelize.org/docs/v6/advanced-association-concepts/eager-loading/>
+<https://www.youtube.com/watch?v=DihOP19LQdg>
+<https://www.youtube.com/watch?v=2uqdstsb8WI>
+<https://handlebarsjs.com/>
+<https://www.npmjs.com>
+<https://getbootstrap.com>
 
 Developers:
-1. David Villareal = https://github.com/davidVillarreal03
+
+1. David Villareal - https://github.com/davidVillarreal03
 2. Hannah Mancill - https://github.com/mancillh
 3. Rachel Burgos - https://github.com/rmburgos
 4. Susana Soto - https://github.com/ssoto83
 
-
 ## License
+
 https://choosealicense.com/licenses/mit/
 
 MIT License
@@ -58,27 +92,9 @@ SOFTWARE.
 
 ![License: MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-## Features
-
-If your project has a lot of features, list them here.
-
-## How to Contribute
-
-???
-
-## Tests
-
-???
-
-## Mock-up  
-
-![Reel Bites Homepage](/public/images/readme_homepage.png)  
-
-![Reel Bites loginpage](/public/images/readme_login.png)  
-
-![Reel Bites logoutpage](/public/images/readme_logout.png)  
-
 ## Questions
+
 For questions about the project, you can reach me via:
+
 - GitHub: (https://github.com/davidVillarreal03/super-team-project-2.git)
 - Email: team6@email.com
