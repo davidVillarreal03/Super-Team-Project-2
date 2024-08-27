@@ -41,9 +41,16 @@ router.get('/login', async (req, res) => {
   res.render('login');
 });
 
+<<<<<<< HEAD
 router.get('/favorites', async (req, res) => {
+=======
+router.get('/favorite', async (req, res) => {
+  console.log(req.session, "============================================")
+>>>>>>> e8d8a51357764acfec72554bba27adb52fdbf93f
   if (req.session.logged_in) {
+    console.log("inside if statement")
     try {
+<<<<<<< HEAD
       const favorites = await Favorite.findAll({
         where: { id: req.session.user_id },
       });
@@ -51,6 +58,11 @@ router.get('/favorites', async (req, res) => {
       res
         .status(200)
         .render('favorites', { favorites, logged_in: req.session.logged_in });
+=======
+      const favorites = await Favorite.findAll({ where: { id: req.session.user_id } });
+
+      res.status(200).render("favorites",{favorites,logged_in: req.session.logged_in});
+>>>>>>> e8d8a51357764acfec72554bba27adb52fdbf93f
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
