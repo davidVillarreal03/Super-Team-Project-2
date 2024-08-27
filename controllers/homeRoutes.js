@@ -41,6 +41,7 @@ router.get('/login', async (req, res) => {
 
 router.get('/api/favorite', async (req, res) => {
   if (req.session.logged_in) {
+    console.log('inside if statement');
     try {
       const favorites = await Favorite.findAll({
         where: { id: req.session.user_id },

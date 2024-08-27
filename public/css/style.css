@@ -323,3 +323,39 @@ form .btn {
   color:#ccc;
   background-color:#dc3546;
 }
+
+/* Genre */
+.card-body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: black; 
+}
+
+.genre-container {
+  background-color: #000;
+  padding-left: 50px;
+}
+
+h5.card-title {
+  color: #ccc;
+  font-weight: 700;
+}
+
+.card-text {
+  color: #ccc;
+}
+
+.col-md-4 {
+  background-color: #000;
+}
+
+.genre-container .btn{
+  background-color: #dc3546;
+  color: black;
+  float: right;
+  margin: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.genre-container .btn:hover{
+  background-color: #dc3546;
+  color: #ccc;
+}
