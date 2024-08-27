@@ -13,7 +13,7 @@ const signupFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/favorite');
+        document.location.replace('/api/favorite');
       } else {
         alert(response.statusText);
       }
