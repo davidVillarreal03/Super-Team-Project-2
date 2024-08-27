@@ -126,8 +126,9 @@ body, html {
 
 /* Pauses movie scroll on hover of mouse */
 .movie-carousel:hover {
-  animation-play-state: paused;
+  animation-play-state: paused; /* Change on hover */  
 }
+
 
 .movie-card {
   background-color: black;
@@ -142,6 +143,16 @@ body, html {
 .movie-card img {
   width: 100%;
   height: auto;
+}
+
+.movie-card {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+
+.movie-card:hover {
+  filter: none;
+  -webkit-filter: grayscale(0);
 }
 
 
