@@ -42,36 +42,62 @@ router.get('/login', async (req, res) => {
 });
 
 router.get('/favorite', async (req, res) => {
-  console.log(req.session, "============================================")
+  console.log(req.session, '============================================');
   if (req.session.logged_in) {
-    console.log("inside if statement")
+    console.log('inside if statement');
     try {
-      const favorites = await Favorite.findAll({ where: { id: req.session.user_id } });
+      const favorites = await Favorite.findAll({
+        where: { id: req.session.user_id },
+      });
 
-      res.status(200).render("favorites",{favorites,logged_in: req.session.logged_in});
+      res
+        .status(200)
+        .render('favorites', { favorites, logged_in: req.session.logged_in });
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
     }
   } else {
-    res.status(401).redirect("/login");
+    res.status(401).redirect('/login');
   }
 });
 
 router.get('/genres/:id', async (req, res) => {
-  // try {
-  const movieData = Movie.findAll({
-    where: {
-      genre_id: req.params.id,
-    },
-  });
-  const movies = movieData.map((movie) => movie.get({ plain: true }));
-  res.render('genres', {
-    movies,
-  });
-  // } catch(err){
-  //   res.status(500).json(err)
-  // }
+  try {
+    const movieData = await Movie.findAll({
+      where: {
+        genre_id: req.params.id, // Use 'genre_id' to match movies with the specified genre
+      },
+    });
+
+    // Serialize the movie data
+    const movies = movieData.map((movie) => movie.get({ plain: true }));
+
+    // Render the genre page with the movies
+    res.render('genres', {
+      movies,
+      logged_in: req.session.logged_in, // Pass session info for conditional rendering
+    });
+  } catch (err) {
+    // Handle errors by sending a 500 status code
+    res.status(500).json(err);
+  }
 });
+
+// router.get('/genres/:id', async (req, res) => {
+//   // try {
+//   const movieData = Movie.findAll({
+//     where: {
+//       genre_id: req.params.id,
+//     },
+//   });
+//   const movies = movieData.map((movie) => movie.get({ plain: true }));
+//   res.render('genres', {
+//     movies,
+//   });
+//   // } catch(err){
+//   //   res.status(500).json(err)
+//   // }
+// });
 
 module.exports = router;
