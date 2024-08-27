@@ -4,30 +4,34 @@ const Favorite = require('./Favorite');
 const Genre = require('./Genre');
 
 // A User has many Movies
-User.belongsToMany(Movie, { 
+User.belongsToMany(Movie, {
   through: {
     model: Favorite,
-    unique: false 
+    unique: false,
   },
-  foreignKey: "user_id"
+  foreignKey: 'user_id',
 });
 
 // A Movie belongs to many Users
-Movie.belongsToMany(User, { 
+Movie.belongsToMany(User, {
   through: {
     model: Favorite,
-    unique: false 
+    unique: false,
   },
-  foreignKey: "movie_id" 
+  foreignKey: 'movie_id',
+});
+
+Genre.hasMany(Movie, {
+  foreignKey: 'genre_id',
 });
 
 Movie.belongsTo(Genre, {
-  foreignKey: "genre_id"
-})
+  foreignKey: 'genre_id',
+});
 
 module.exports = {
   User,
   Movie,
   Genre,
-  Favorite
+  Favorite,
 };
