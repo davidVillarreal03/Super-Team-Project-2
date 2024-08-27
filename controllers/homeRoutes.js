@@ -43,6 +43,7 @@ router.get('/login', async (req, res) => {
 
 router.get('/favorite', async (req, res) => {
   console.log(req.session, '============================================');
+  console.log(req.session, '============================================');
   if (req.session.logged_in) {
     console.log('inside if statement');
     try {
@@ -83,17 +84,39 @@ router.get('/genres/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+// router.get('/genres/:id', async (req, res) => {
+//   try {
+//     const genreData = await Genre.findByPk(req.params.id, {
+//       include: [
+//         {
+//           model: Movie,
+//           attributes: ['id', 'title', 'plot', 'filename'],
+//         },
+//       ],
+//     });
+
+//     const genre = genreData.get({ plain: true });
+
+//     res.render('genres', {
+//       ...genre,
+//       logged_in: req.session.logged_in,
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 // router.get('/genres/:id', async (req, res) => {
 //   // try {
 //   const movieData = Movie.findAll({
 //     where: {
-//       genre_id: req.params.id,
+//       id: req.params.id,
 //     },
 //   });
 //   const movies = movieData.map((movie) => movie.get({ plain: true }));
 //   res.render('genres', {
 //     movies,
+//     genres,
 //   });
 //   // } catch(err){
 //   //   res.status(500).json(err)

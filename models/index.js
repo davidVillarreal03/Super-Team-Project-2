@@ -26,7 +26,7 @@ Genre.hasMany(Movie, {
 });
 
 Movie.belongsTo(Genre, {
-  foreignKey: 'id',
+  foreignKey: 'genre_id',
 });
 
 module.exports = {

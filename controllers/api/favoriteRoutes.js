@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Favorite } = require('../../models');
 
-// Add Favorite 
+// Add Favorite
 // router.post('/', async (req, res) => {
 //     Favorite.create({
 //         title: req.body.title,
@@ -12,10 +12,10 @@ const { Favorite } = require('../../models');
 //         genre_id: req.body.genre_id,
 //         plot: req.body.plot,
 //         filename: req.body.filename
-//     }) 
+//     })
 //     .then ((newMovie) => {
 //         res.json(newMovie);
-//     }) 
+//     })
 //     .catch((err) => {
 //         res.status(400).json(err);
 //     });
@@ -34,44 +34,42 @@ const { Favorite } = require('../../models');
 //       res.status(401).json({ message: 'Not logged in' });
 //     }
 //   });
-  
-  // POST a new favorite
-  router.post('/', async (req, res) => {
-    if (req.session.logged_in) {
-      try {
-        const newFavorite = await Favorite.create({
-          ...req.body,
-          user_id: req.session.user_id
-        });
-        res.status(200).json(newFavorite);
-      } catch (err) {
-        res.status(400).json(err);
-      }
-    } else {
-      res.status(401).json({ message: 'Not logged in' });
+
+// POST a new favorite
+router.post('/', async (req, res) => {
+  if (req.session.logged_in) {
+    try {
+      const newFavorite = await Favorite.create({
+        ...req.body,
+        user_id: req.session.user_id,
+      });
+      res.status(200).json(newFavorite);
+    } catch (err) {
+      res.status(400).json(err);
     }
-  });
-  
-  // DELETE a favorite
-  router.delete('/:id', async (req, res) => {
-    if (req.session.logged_in) {
-      try {
-        const result = await Favorite.destroy({
-          where: { id: req.params.id, user_id: req.session.user_id }
-        });
-        if (result) {
-          res.status(200).json({ message: 'Favorite removed' });
-        } else {
-          res.status(404).json({ message: 'Favorite not found' });
-        }
-      } catch (err) {
-        res.status(500).json(err);
+  } else {
+    res.status(401).json({ message: 'Not logged in' });
+  }
+});
+
+// DELETE a favorite
+router.delete('/:id', async (req, res) => {
+  if (req.session.logged_in) {
+    try {
+      const result = await Favorite.destroy({
+        where: { id: req.params.id, user_id: req.session.user_id },
+      });
+      if (result) {
+        res.status(200).json({ message: 'Favorite removed' });
+      } else {
+        res.status(404).json({ message: 'Favorite not found' });
       }
-    } else {
-      res.status(401).json({ message: 'Not logged in' });
+    } catch (err) {
+      res.status(500).json(err);
     }
-  });
-  
-  module.exports = router;
+  } else {
+    res.status(401).json({ message: 'Not logged in' });
+  }
+});
 
 module.exports = router;

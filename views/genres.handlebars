@@ -1,7 +1,21 @@
-{{#each movies as |movie|}}
-  <a href='/movie/{{movie.id}}'>
-    <div class='movie-card'>
-      <img src='/images/{{movie.filename}}' alt='{{movie.title}}' />
+<!-- Layout wrapper -->
+{{> header}}
+
+<div class="container">
+  <h1>{{genre_name}} Movies</h1>
+  
+  <!-- Grid of Movies -->
+  <div class="grid">
+    {{#each movies}}
+    <div class="grid-item">
+      <a href="/movie/{{this.id}}">
+        <img src="/images/{{this.filename}}" alt="{{this.title}}" class="movie-poster"/>
+        <h3>{{this.title}}</h3>
+      </a>
     </div>
-  </a>
-{{/each}}
+    {{/each}}
+  </div>
+</div>
+
+
+
