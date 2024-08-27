@@ -86,8 +86,21 @@ body, html {
 
 .homepage-header h1 {
   font-weight: 1000;
-  padding-right: 680px;
+  padding-right: 550px;
 }
+
+.homepage-header .btn {
+  background-color: #dc3546;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  color: black;
+ }
+
+ .homepage-header .btn:hover {
+  background-color: #dc3546;
+  color: #ccc;
+ }
 
 .dropdown .btn {
   color: black;
@@ -196,44 +209,117 @@ body, html {
 .form-logo {
   height:400px;
 }
+
 form .btn {
  background-color: #dc3546;
  margin-top: 10px;
  margin-bottom: 10px;
 }
 
-
-
-/* All of the styling below was for making Genre buttons instead of dropdown
-
-.navbar {
-  background-color: black;
+/* Favorites */
+.black-background {
+  background-color: #000;
+  height: 100%;
   width: 100%;
 }
 
-.container-fluid {
-  width: 600px;
+.home {
+  background-color: #000;
 }
 
-.genre-btn {
-  width: 100px;
-  height: 60px;
-  background: radial-gradient(circle at 12.3% 19.3%, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%);
-  border-color: #03045e;
-  border-style: solid;
-  border-radius: 10px;
-  padding: 10px;  
-  display: inline;
-}
-
-.genre-btn a {
-  background-color: black;
-  text-decoration: none;
-  color: #000000;
-}
-.genre-btn h2 {
+.home h1 {
+  position: absolute;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 16px;
-  text-decoration: none;
-  color: #000000;
-} 
+  margin: 0px auto;
+  padding: 0;
+  background-color: black;
+  color: #ccc;
+  padding-bottom: 10px;
+  left: 8px;
+}
+
+.home .btn {
+  position: relative;
+  float: right;
+  background-color: #dc3546;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 25px;
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  border: solid;
+  border-color: #000;
+ }
+ .home .btn:hover {
+  background-color: #dc3546;
+  color: #ccc
+ }
+
+/* Movie */
+.movie-by-id {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: black;
+  color: #ccc;
+  padding: 30px;
+  padding-bottom: 100px;
+}
+
+.movie-by-id .btn {
+  position: relative;
+  float: right;
+  background-color: #dc3546;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 25px;
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  border: solid;
+  border-color: #000;
+}
+
+.movie-by-id .btn:hover {
+  color: #ccc;
+  background-color: #dc3546;
+}
+
+.movie-by-id p {
+  font-size: 18px;
+}
+
+.movie-by-id span {
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.poster {
+  width: 300px;
+  height: 300px; 
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.poster img{
+  height: 100%;
+  width: auto;
+  position: absolute;
+  margin-left: 30px;
+}
+
+.movie-by-id #favorite-btn {
+  position: relative;
+  float: left;
+  background-color: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 25px;
+  color: #dc3546;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  border: solid;
+  border-color: #dc3546;
+}
+
+.movie-by-id #favorite-btn:hover {
+  color:#ccc;
+  background-color:#dc3546;
+}
