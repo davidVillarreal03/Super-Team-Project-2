@@ -46,12 +46,12 @@ Navigate to <https://reelbites.onrender.com> to view live project.
 
 Special thanks to our TA's Gerard Menella, Mark Alfano and tutors for giving us support.
 
-<https://sequelize.org/docs/v6/advanced-association-concepts/eager-loading/>
-<https://www.youtube.com/watch?v=DihOP19LQdg>
-<https://www.youtube.com/watch?v=2uqdstsb8WI>
-<https://handlebarsjs.com/>
-<https://www.npmjs.com>
-<https://getbootstrap.com>
+- <https://sequelize.org/docs/v6/advanced-association-concepts/eager-loading/>
+- <https://www.youtube.com/watch?v=DihOP19LQdg>
+- <https://www.youtube.com/watch?v=2uqdstsb8WI>
+- <https://handlebarsjs.com/>
+- <https://www.npmjs.com>
+- <https://getbootstrap.com>
 
 Developers:
 
