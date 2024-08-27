@@ -40,18 +40,20 @@ router.delete('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
   try {
-    const userData = await User.create(req.body);
-
-    req.session.save(() => {
-      req.session.user_id = userData.id;
-      req.session.logged_in = true;
-
-      res.status(200).json(userData);
+    const userData = await User.create({
+      name: req.body.name,
+      email: req.body.email,
+      password: req.body.password,
     });
-  } catch (err) {
-    res.status(400).json(err);
-  }
+    
+      req.session.save(() => {
+        req.session.logged_in = true,
+        req.session.user_id = userData.id
+        res.status(200).json(userData)
+      }) 
+  } catch (err) {res.json(err)}
 });
+  
 
 // Login
 router.post('/login', async (req, res) => {
